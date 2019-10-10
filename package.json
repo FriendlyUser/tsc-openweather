@@ -1,0 +1,28 @@
+{
+  "name": "openweathermap-typescript",
+  "version": "0.1.0",
+  "description": "open weather map wrapper written in typescript",
+  "main": "dist/openweather.js",
+  "types": "dist/openweather.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --outDir dist",
+    "start": "node dist/openweather.js"
+  },
+  "keywords": [
+    "typescript",
+    "open",
+    "weather",
+    "map"
+  ],
+  "author": "David Li",
+  "license": "ISC",
+  "devDependencies": {
+    "typedoc": "^0.15.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "@types/request": "^2.48.3",
+    "request": "^2.88.0"
+  }
+}
