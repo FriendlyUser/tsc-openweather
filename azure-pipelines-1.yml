@@ -30,13 +30,15 @@ steps:
 
 - script: |
     rm -rf .git
+    npm install typedoc || true
+    npm run docs
     cd docs
     git init
     git config --local user.name "Azure Pipelines"
     git config --local user.email "azuredevops@microsoft.com"
     rm docs/index.html
     cp docs/globals.html docs/index.html
-    git add .
+    git add docs --force
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
     git remote add origin https://$(USERNAME):$(GITHUB_TOKEN)@github.com/$(Build.Repository.Name).git
     git push origin HEAD:refs/heads/gh-pages --force
@@ -47,7 +49,7 @@ steps:
         eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   
 - task: DownloadSecureFile@1
-  name: keyJson
+  name: npmrc
   inputs:
     secureFile: '.npmrc'
   displayName: 'Download .npmrc'
@@ -58,8 +60,9 @@ steps:
 
 - script: |
     ls
+    cp $(npmrc.secureFilePath) key.json
     npm publish
-  displayName: 'Deploy to GitHub Pages'
+  displayName: 'Deploy to npm package'
   condition: |
     and(not(eq(variables['Build.Reason'], 'PullRequest')),
         eq(variables['Build.SourceBranch'], 'refs/heads/master'))
