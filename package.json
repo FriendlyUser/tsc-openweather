@@ -1,5 +1,5 @@
 {
-  "name": "openweathermap-typescript",
+  "name": "tsc-openweather",
   "version": "0.1.0",
   "description": "open weather map wrapper written in typescript",
   "main": "dist/openweather.js",
@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --outDir dist",
-    "start": "node dist/openweather.js"
+    "start": "node dist/openweather.js",
+    "docs": "npx typedoc . --exclude node_modules"
   },
   "keywords": [
     "typescript",

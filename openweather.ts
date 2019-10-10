@@ -93,8 +93,6 @@ class OpenWeather {
 }
 
 // test code here
-
-// push tommorow morning after switching out the key 1243ceb413c799ddad21527b0e41a23e
 const weather = new OpenWeather("1243ceb413c799ddad21527b0e41a23e")
 
 weather.getWeatherByCityId(6174032, (err: any, currentWeather: any) => {
