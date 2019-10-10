@@ -54,13 +54,9 @@ steps:
     secureFile: '.npmrc'
   displayName: 'Download .npmrc'
 
-- task: npmAuthenticate@0
-  inputs:
-    workingFile: '.npmrc'
-
 - script: |
     ls
-    cp $(npmrc.secureFilePath) key.json
+    cp $(npmrc.secureFilePath) .npmrc
     npm publish
   displayName: 'Deploy to npm package'
   condition: |
