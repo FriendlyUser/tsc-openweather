@@ -84,7 +84,6 @@ class OpenWeather {
       }
       if (data.body) {
         response = JSON.parse(data.body)
-        console.log(response)
       }
     }
   
