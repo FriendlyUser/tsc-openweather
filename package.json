@@ -5,7 +5,6 @@
   "main": "dist/openweather.js",
   "types": "dist/openweather.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --outDir dist",
     "start": "node dist/openweather.js",
     "docs": "npx typedoc . --options typedoc.js --readme ReadMe.md"
@@ -20,10 +19,13 @@
   "license": "ISC",
   "devDependencies": {
     "typedoc": "^0.15.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "@types/request": "^2.48.3"
   },
   "dependencies": {
-    "@types/request": "^2.48.3",
     "request": "^2.88.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }

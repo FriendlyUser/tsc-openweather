@@ -7,6 +7,7 @@ Wrapper around openweather map made using typescript
 Usage example
 
 ```
+const {OpenWeather} = require('tsc-openweather')
 const weather = new OpenWeather("1243ceb413c799ddad21527b0e41a23e")
 
 weather.getWeatherByCityId(6174032, (err: any, currentWeather: any) => {
