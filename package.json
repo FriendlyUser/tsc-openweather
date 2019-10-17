@@ -1,6 +1,6 @@
 {
   "name": "tsc-openweather",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "open weather map wrapper written in typescript",
   "main": "dist/openweather.js",
   "types": "dist/openweather.d.ts",
@@ -26,7 +26,7 @@
     "request": "^2.88.0"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/FriendlyUser/tsc-openweather"
+    "type": "git",
+    "url": "https://github.com/FriendlyUser/tsc-openweather"
   }
 }
