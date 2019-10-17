@@ -25,7 +25,8 @@
   "dependencies": {
     "request": "^2.88.0"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/FriendlyUser/tsc-openweather"
   }
 }
