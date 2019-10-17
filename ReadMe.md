@@ -2,6 +2,9 @@
 
 ### OpenWeather Typescript
 
+Free Feel to contact me if there any bugs or issues that occur.
+
+
 Wrapper around openweather map made using typescript
 
 ## Usage

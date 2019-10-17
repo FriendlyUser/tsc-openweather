@@ -36,7 +36,7 @@ steps:
     git init
     git config --local user.name "Azure Pipelines"
     git config --local user.email "azuredevops@microsoft.com"
-    git add docs --force
+    git add . --force
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
     git remote add origin https://$(USERNAME):$(GITHUB_TOKEN)@github.com/$(Build.Repository.Name).git
     git push origin HEAD:refs/heads/gh-pages --force
