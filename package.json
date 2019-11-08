@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc --outDir dist",
     "start": "node dist/openweather.js",
-    "docs": "npx typedoc . --options typedoc.js --readme ReadMe.md"
+    "docs": "npx typedoc . --readme ReadMe.md"
   },
   "keywords": [
     "typescript",
@@ -18,9 +18,16 @@
   "author": "David Li",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-typescript": "^7.7.2",
+    "@types/jest": "^24.0.22",
+    "@types/request": "^2.48.3",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
     "typedoc": "^0.15.0",
-    "typescript": "^3.6.4",
-    "@types/request": "^2.48.3"
+    "typescript": "^3.6.4"
   },
   "dependencies": {
     "request": "^2.88.0"
